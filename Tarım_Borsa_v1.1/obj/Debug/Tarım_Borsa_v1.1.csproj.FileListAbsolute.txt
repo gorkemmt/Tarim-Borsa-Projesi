@@ -1,0 +1,12 @@
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.csprojAssemblyReference.cache
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1._1.Form1.resources
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1._1.Properties.Resources.resources
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.csproj.GenerateResource.cache
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.csproj.CoreCompileInputs.cache
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\bin\Debug\Tarım_Borsa_v1.1.exe.config
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\bin\Debug\Tarım_Borsa_v1.1.exe
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\bin\Debug\Tarım_Borsa_v1.1.pdb
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.exe
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.pdb
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1._1.kullanici_ekrani.resources
+C:\Users\Görkem\Desktop\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1._1.admin_ekrani.resources
