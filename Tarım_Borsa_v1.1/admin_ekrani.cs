@@ -106,8 +106,9 @@ namespace Tarım_Borsa_v1._1
                 OleDbCommand onaykomutu = new OleDbCommand("update uruntalep set durum='onayli' where talepno='" + onaysizurundgw.CurrentRow.Cells[7].Value.ToString() + "'", baglantim);           //update komutu kullanarak veritabanında uruntalep tablosundaki onay durumlarını güncelledik
 
                 onaykomutu.ExecuteNonQuery();
-                envanter_bilgi_getir();
+                
                 baglantim.Close();
+                envanter_bilgi_getir();
                 MessageBox.Show("onay işlemi başarılı");
            
         }
@@ -119,8 +120,9 @@ namespace Tarım_Borsa_v1._1
                 OleDbCommand onaykomutu = new OleDbCommand("update paratalep set durum='onayli' where talepno='" + onaysizparadgw.CurrentRow.Cells[3].Value.ToString() + "'", baglantim);
 
                 onaykomutu.ExecuteNonQuery();
-                envanter_bilgi_getir();
+                
                 baglantim.Close();
+                envanter_bilgi_getir();
                 MessageBox.Show("onay işlemi başarılı");
       
         }
