@@ -10,7 +10,6 @@
 # proje yapımında kullanılarn programlar
 c# ve ms access kullanılmıştır
 
-# oluşturan kişiler
-Murat Görkem Taşlaroğlu
+
 
 
