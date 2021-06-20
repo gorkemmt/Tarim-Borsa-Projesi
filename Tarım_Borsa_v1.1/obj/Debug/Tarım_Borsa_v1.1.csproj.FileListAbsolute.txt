@@ -22,3 +22,21 @@ C:\Users\Görkem\Desktop\yazılım yapımı proje\yazılım yapımı proje\Tarı
 C:\Users\Görkem\Desktop\yazılım yapımı proje\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.csproj.CoreCompileInputs.cache
 C:\Users\Görkem\Desktop\yazılım yapımı proje\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.exe
 C:\Users\Görkem\Desktop\yazılım yapımı proje\yazılım yapımı proje\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.pdb
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\bin\Debug\Tarım_Borsa_v1.1.exe.config
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\bin\Debug\Tarım_Borsa_v1.1.exe
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\bin\Debug\Tarım_Borsa_v1.1.pdb
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.csprojAssemblyReference.cache
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1._1.admin_ekrani.resources
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1._1.Giris.resources
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1._1.kullanici_ekrani.resources
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1._1.Properties.Resources.resources
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.csproj.GenerateResource.cache
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.csproj.CoreCompileInputs.cache
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.exe
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.pdb
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.csproj.ResolveComReference.cache
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\bin\Debug\EPPlus.dll
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\bin\Debug\EPPlus.xml
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Görkem\Desktop\Tarım_Borsa_v1.1\Tarım_Borsa_v1.1\obj\Debug\Tarım_Borsa_v1.1.csproj.CopyComplete

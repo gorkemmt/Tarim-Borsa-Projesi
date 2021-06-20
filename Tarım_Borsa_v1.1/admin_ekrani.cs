@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;   //veritabanı için kütüphane ekliyoruz
 using System.IO;
+using System.Xml;
 
 namespace Tarım_Borsa_v1._1
 {
@@ -29,6 +30,10 @@ namespace Tarım_Borsa_v1._1
             ilanlar(); 
             onaysiz_urun_talebi_göster();
             envanter_bilgi_getir();
+            kur_getir();
+
+            tabControl1.ItemSize = new Size(0, 1);      //tabcontrol1 sekme başlıkları gizlendi
+            tabControl1.SizeMode = TabSizeMode.Fixed;
         }
 
         private void kullanici_goster()         // KULLANICI LİSTESİ SAYFASINDA KULLANICI BİLGİLERİNİ GÖSTERMEMİZE YARAYAN FONKSİYON
@@ -70,7 +75,7 @@ namespace Tarım_Borsa_v1._1
             
                 baglantim.Open();
 
-                OleDbDataAdapter onaysiz_para_ilan_listele = new OleDbDataAdapter("select kullaniciadi AS [KULLANICI ADI],para AS [YÜKLENEN BAKİYE],durum AS [ONAY DURUMU],talepno AS [TALEP NO] from paratalep   Order By kullaniciadi ASC", baglantim);
+                OleDbDataAdapter onaysiz_para_ilan_listele = new OleDbDataAdapter("select kullaniciadi AS [KULLANICI ADI],para AS [YÜKLENEN BAKİYE],durum AS [ONAY DURUMU],talepno AS [TALEP NO],parabirim AS [PARA BİRİMİ] from paratalep   Order By kullaniciadi ASC", baglantim);
 
                 DataSet dsbellek1 = new DataSet();  
 
@@ -147,15 +152,34 @@ namespace Tarım_Borsa_v1._1
         private void cikis_fonk()       //ÇIKIŞ FONKSİYONU
         {
             this.Hide();
-            Form1 girisform = new Form1();
+            Giris girisform = new Giris();
             girisform.Show();
+        }
+
+        private void kur_getir()       //ANLIK OLARAK DÖVİZ BİLGİSİNİ XML ÜZERİNDEN ALAN FONKSİYON -----YENİ İSTEK
+        {
+            string bugun = "http://www.tcmb.gov.tr/kurlar/today.xml";
+
+            var xmldoc = new XmlDocument();
+            xmldoc.Load(bugun);
+
+            string Dolar = xmldoc.SelectSingleNode("Tarih_Date/Currency [@Kod='USD']/BanknoteSelling").InnerXml;    //dolar değişkenine siteüzerinden bilgiyi alıp yazıyoruz
+            dolaryaz.Text = string.Format(" {0} ", Dolar).Replace('.', ',');    //admin ekranında kur bilgilerini yazdırıp görülmesini sağladık ve gelen bilginin sorun çıkarmaması için  . ve , değişimini yaptık
+
+            string Euro = xmldoc.SelectSingleNode("Tarih_Date/Currency [@Kod='EUR']/BanknoteSelling").InnerXml;
+            euroyaz.Text = string.Format(" {0} ", Euro).Replace('.', ',');
+
+            string Sterlin = xmldoc.SelectSingleNode("Tarih_Date/Currency [@Kod='GBP']/BanknoteSelling").InnerXml;
+            sterlinyaz.Text = string.Format(" {0} ", Sterlin).Replace('.', ',');
+
         }
 
 
 
-        private void paraonaybtn_Click(object sender, EventArgs e)   //BAKİYE TALEBİNİ YÜKLE BUTONUNUN İŞLEMLERİ
+
+        private void paraonaybtn_Click(object sender, EventArgs e)   //BAKİYE TALEBİNİ YÜKLE BUTONUNUN İŞLEMLERİ----YENİLİK VAR
         {
-            int yenipara = 0;
+            double yenipara = 0;
             bool envanter_arama_durum = false;
 
             baglantim.Open();
@@ -164,12 +188,19 @@ namespace Tarım_Borsa_v1._1
 
             OleDbDataReader kayitoku = envantersorgu.ExecuteReader();
 
+
             while (kayitoku.Read())
             {
                 envanter_arama_durum = true;
 
-                yenipara = Int32.Parse(onaysizparadgw.CurrentRow.Cells[1].Value.ToString());        //yenipara değişkenine eski ve talep ettiği paranın toplamını atadık
-                yenipara += Int32.Parse(kayitoku.GetValue(1).ToString());
+                double anlikkur;
+                if (onaysizparadgw.CurrentRow.Cells[4].Value.ToString() == "Dolar") { anlikkur = Convert.ToDouble(dolaryaz.Text); }     //kur bilgisini aldık ve anlikkur değişkenine atadık
+                else if (onaysizparadgw.CurrentRow.Cells[4].Value.ToString() == "Euro") { anlikkur = Convert.ToDouble(euroyaz.Text); }
+                else if (onaysizparadgw.CurrentRow.Cells[4].Value.ToString() == "Sterlin") { anlikkur = Convert.ToDouble(sterlinyaz.Text); }
+                else { anlikkur = 1; }
+
+                yenipara = Convert.ToDouble(onaysizparadgw.CurrentRow.Cells[1].Value.ToString())*anlikkur;        //yenipara değişkenine talepteki para birim miktarı ile döviz birimi üzerinden tl karşılığını hesaplattık  --->yeni
+                yenipara += Convert.ToDouble(kayitoku.GetValue(1).ToString());
 
                 OleDbCommand iadekomutu = new OleDbCommand("update envanterler set para='" + yenipara + "' where kullaniciadi='" + onaysizparadgw.CurrentRow.Cells[0].Value + "'", baglantim);
                 iadekomutu.ExecuteNonQuery();               //seçili kullanıcının envanterlerine ulaşıp update komutu sayesinde parasını yenipara değişkeninin değerini atadık
@@ -192,14 +223,7 @@ namespace Tarım_Borsa_v1._1
             baglantim.Close();
             onaysiz_para_talebi_göster();
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)      
-        {
-            this.Hide();
-            Form1 girisform = new Form1();
-            girisform.Show();
-        }        
+        }      
 
         private void parareddbtn_Click(object sender, EventArgs e)      //BAKİYE TALEBİ KABUL EDİLMEZSE YAPILACAK İŞLEMLER
         {
@@ -215,12 +239,7 @@ namespace Tarım_Borsa_v1._1
             onaysiz_para_talebi_göster();       //var olan bakiye taleplerini görmek için tekrar çağırdık
             
         }
-        
-        private void button3_Click(object sender, EventArgs e)      //ÇIKIŞ BUTONUNA TIKLANDIĞINDA KULLANICI GİRİŞİ SAYFASINA DÖNÜLMESİNİ SAĞLADIK
-        {
-            cikis_fonk();
-        }
-        
+          
         private void urunonaylabtn_Click(object sender, EventArgs e)        //ÜRÜN TALEBİNİ ONAYLA BUTONUNA TIKLADNDIĞINDA YAPILACAK İŞLEMLER
         {
             int yenipamuk=0,yeniarpa=0,yeniyulaf=0,yenibugday=0,yenipetrol=0 ;
@@ -288,23 +307,29 @@ namespace Tarım_Borsa_v1._1
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void uruntalepsayfabuton_Click(object sender, EventArgs e)      //ADMİN KULLANICISININ KULLANICILARI VE BİLGİLERİNİ GÖREBİLDİĞİ SAYFAYI GETİRİR.
+        {
+            tabControl1.SelectedTab = tabkullanıcılar;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)      //ADMİN KULLANICISININ İLANLARI GÖREBİLDİĞİ SAYFAYI GETİRİR.
+        {
+            tabControl1.SelectedTab = tabilanlar;
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)      //ADMİN KULLANICISININ ÜRÜN TALEPLERİNİ ONAYLAMASI VE REDDETMESİ İÇİN KULLANACAĞI SAYFAYI GETİRİR.
+        {
+            tabControl1.SelectedTab = taburunonay;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)      //ADMİN KULLANICISININ PARA TALEPLERİNİ ONAYLAMASI VE REDDETMESİ İÇİN KULLANACAĞI SAYFAYI GETİRİR.
+        {
+            tabControl1.SelectedTab = tabparaonay;
+        }
+
+        private void button6_Click(object sender, EventArgs e)      //ÇIKIŞ BUTONUNUN İŞLEMLERİNİ ÇAĞIRIR BUTON İÇERİSİNDE
         {
             cikis_fonk();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 girisform = new Form1();
-            girisform.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 girisform = new Form1();
-            girisform.Show();
         }
     }
 }
