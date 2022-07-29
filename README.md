@@ -23,36 +23,37 @@ C# ve MS Access kullanılmıştır.
 
 # Uygulama içi menü ve sayfaların görselleri;
 
-Kullanıcı giriş sayfası:
+# Kullanıcı giriş sayfası:
+
 ![login page](https://user-images.githubusercontent.com/84309668/181712208-97853b91-1b79-4ebb-ab74-7a121e69d3e2.PNG)
  
-Kullanıcı ürün ve bakiye giriş sayfası:
+# Kullanıcı ürün ve bakiye giriş sayfası:
 ![kullanıcı talep sayfası](https://user-images.githubusercontent.com/84309668/181713022-30b0893e-31be-4869-a5f9-51fb4f32ae2c.PNG)
 
-Kullanıcı emir oluşturma sayfası:
+# Kullanıcı emir oluşturma sayfası:
 ![kullanıcı emir oluşturma sayfası](https://user-images.githubusercontent.com/84309668/181713231-30f30eec-6b86-415d-a4cf-e2af7ad7f86c.PNG)
 
-Kullanıcı ilan oluşturma sayfası:
+# Kullanıcı ilan oluşturma sayfası:
 ![ilan oluşturma sayfası](https://user-images.githubusercontent.com/84309668/181713505-71103838-ff4d-4270-8b04-3097b4cb6830.PNG)
 
-Kullanıcının kayıtlı emirleri görebileceği sayfa:
+# Kullanıcının kayıtlı emirleri görebileceği sayfa:
 ![kayıtlı emirler](https://user-images.githubusercontent.com/84309668/181714189-33e23aba-7784-4734-8bde-4c63879f8e2a.PNG)
 
-Kullanıcı rapor alma sayfası:
+# Kullanıcı rapor alma sayfası:
 ![rapor oluşturma sayfası](https://user-images.githubusercontent.com/84309668/181714411-d64b041c-e248-45c6-8d06-f2624dfef34d.PNG)
 
-Örnek Rapor :
+# Örnek Rapor :
 ![excel rapor](https://user-images.githubusercontent.com/84309668/181714668-474bce46-2af2-48c5-9096-62bf245cb78a.PNG)
 
-Admin Kullanıcı kontrol sayfası:
+# Admin Kullanıcı kontrol sayfası:
 ![admin Kullanıcı görüntüleme sayfası](https://user-images.githubusercontent.com/84309668/181714976-32362e1b-5b55-498f-9ef0-7c4c62ce6f3d.PNG)
 
-Admin İlan görüntüleme sayfası:
+# Admin İlan görüntüleme sayfası:
 ![admin ilan görüntüleme sayfası](https://user-images.githubusercontent.com/84309668/181715167-7ec0e4f2-55e8-40e1-a8cf-55fdab2d79ac.PNG)
 
-Admin için ürün yükleme taleplerini kontrol etme sayfası:
+# Admin için ürün yükleme taleplerini kontrol etme sayfası:
 ![admin ürün yükleme talebi onay sayfası](https://user-images.githubusercontent.com/84309668/181715461-46d829f9-c1f6-49ef-9d26-6401c6403d37.PNG)
 
-Admin için bakiye yükleme talebi onay sayfası:
+# Admin için bakiye yükleme talebi onay sayfası:
 ![admin bakiye yükleme talebi onay sayfası](https://user-images.githubusercontent.com/84309668/181715653-8871eda2-8232-41ce-ba70-0ad644b3c620.PNG)
 
