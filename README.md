@@ -4,9 +4,6 @@
 # Proje Yapımında Kullanılan Programlar;
 C# ve MS Access kullanılmıştır.
 
-# Projede Yapımında Çalışanlar:
-Murat Görkem Taşlaroğlu
-
 # Uygulama İçerisinde Yapılabilecek İşlemler
 - Bu projede kullanıcılar (Ad, Soyad, Kullanıcı Adı, Password, TC Kimlik No, Telefon, Email, Adres) gibi bilgilerini sisteme girerek kayıt olabilirler.
 - Kullanıcıların envanterlerine (admin yetkisi tarafından onaylandığı durumlarda) ürün ve bakiye bilgisini hesabına ekleyebildiği bir panel bulunmaktadır.
