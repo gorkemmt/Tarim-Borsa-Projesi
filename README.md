@@ -1,7 +1,7 @@
 # Tarım-Borsa-projesi
 
 
-# Uygulama içerisinde yapılabilecek işlemler
+# Uygulama İçerisinde Yapılabilecek İşlemler
 - Bu projede kullanıcılar (Ad, Soyad, Kullanıcı Adı, Password, TC Kimlik No, Telefon, Email, Adres) gibi bilgilerini sisteme girerek kayıt olabilirler.
 - Kullanıcıların envanterlerine (admin yetkisi tarafından onaylandığı durumlarda) ürün ve bakiye bilgisini hesabına ekleyebildiği bir panel bulunmaktadır.
 - Kullanıcılar hersaplarındaki ürün ve bakiye miktarını yapılan işlemlere göre devamlı olaraka güncellendiğini görebilir.
@@ -10,7 +10,7 @@ Kullanıcılar alıcı veya satıcı olarak işlemler yapabilir.
 Bütün kullanıcılar anlık olarak pazarda bulunan verilmiş ilanları görüntüleyebilir.
 - Kullanıcılar alıcı olarak istediği miktarda ürünü otomatik olarak en ucuz ilandan satın alabilir.
 
-# yeni versiyon güncelleme sonrası özellikler
+# yeni Versiyon Güncelleme Sonrası Özellikler
 - Kullanıcılar oluşturulmuş ilanlar arasından istediği ürünü, istediği fiyatta bulamazsa alım emri oluşturabilecek.Eğer belirttiği değerlerde ilan oluşursa daha sonrasında sistem tarafından otomatik olarak alım işlemi gerçekleşecek.
 - kullanıcı geçmişte yaptığı alım veya satım işlemlerini görebilecek ve istediği ürün ve tarih aralığındaki işlemleri excel dosyası olarak rapor çıktısı alabilecek.
 - kullanıcılar farklı döviz birimlerinden bakiye yükleme talebi oluşturabilecek ve bakiye onayı adminin talebi onayladığı zamandaki kur üzerinden hesaplanarak kişinin bakiyesine eklenecek.
@@ -18,10 +18,10 @@ Bütün kullanıcılar anlık olarak pazarda bulunan verilmiş ilanları görün
 - Admin kullanıcısı oturum açtığında oluşturulan servis sayesinde güncel olarak anlık kur bilgisini "dolar,euro,sterlin" değerlerinin "tl" olarak karşılığını görebilecek.
 
 
-# Proje yapımında kullanılan programlar;
+# Proje Yapımında Kullanılan Programlar;
 C# ve MS Access kullanılmıştır.
 
-# Uygulama içi menü ve sayfaların görselleri;
+# Uygulama İçi Menü Ve Sayfaların Görselleri;
 
 # Kullanıcı giriş sayfası:
 
