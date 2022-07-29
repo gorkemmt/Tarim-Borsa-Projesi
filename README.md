@@ -21,6 +21,7 @@ Bütün kullanıcılar anlık olarak pazarda bulunan verilmiş ilanları görün
 
 # Proje yapımında kullanılan programlar: C# ve MS Access kullanılmıştır.
 
+![finalyytrello2](https://user-images.githubusercontent.com/84309668/181711430-b860281b-86a9-4581-83cb-2fc45156776d.png)
 
 
 
