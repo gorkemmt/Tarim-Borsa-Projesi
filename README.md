@@ -4,7 +4,7 @@
 # Proje Yapımında Kullanılan Programlar;
 C# ve MS Access kullanılmıştır.
 
-# Projede yapımında çalışanlar:
+# Projede Yapımında Çalışanlar:
 Murat Görkem Taşlaroğlu
 
 # Uygulama İçerisinde Yapılabilecek İşlemler
